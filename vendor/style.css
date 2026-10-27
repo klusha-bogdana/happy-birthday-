@@ -1,0 +1,511 @@
+/* --- БАЗОВЫЕ СТИЛИ BODY --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  position: relative;
+  background-image: url('../assets/img/bg.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+  background-attachment: fixed;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.photo-box img,
+.photo-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.age-title {
+  font-size: 3rem;
+  color: #FFB7B2;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  font-family: 'Impact', sans-serif;
+}
+
+/* --- ГЛАВНЫЙ ПЛЕЕР (БОЛЬШОЙ) --- */
+.player-container {
+  width: 100%;
+  max-width: 700px;
+  height: 60px;
+  background-color: #FFD700;
+  border: 4px solid #000000;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.play-button {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.play-button .btn-icon {
+  font-size: 24px;
+  color: #000000;
+  line-height: 1;
+}
+
+.progress-wrapper {
+  flex-grow: 1;
+  height: 8px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #FFFF00;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.1s linear;
+}
+
+.progress-thumb {
+  width: 12px;
+  height: 12px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  pointer-events: none;
+  display: none;
+}
+
+.progress-wrapper:hover .progress-thumb {
+  display: block;
+}
+
+/* --- СРЕДНИЕ СЕКЦИИ И КОТЫ --- */
+.middle-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cake-cat-wrapper {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.cake-cat-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.final-message {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fffdf0;
+  border-top: 2px dashed #FFB7B2;
+}
+
+.final-message p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- БЛОК СО ЗВЁЗДАМИ И ПЛЕЕРАМИ (МАКСИМАЛЬНО УВЕЛИЧЕННЫЕ ЭЛЕМЕНТЫ) --- */
+.star-players-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.star-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;       /* Увеличена ширина группы */
+  min-width: 500px;
+  text-align: center;
+}
+
+.star-btn {
+  width: 280px;      /* Увеличено до ~2x от предыдущего значения (было 140px) */
+  height: 280px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.star-btn:active {
+  transform: scale(0.95);
+}
+
+.star-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.star-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.star-group .player-container {
+  width: 100%;
+  max-width: 100%;
+  height: 60px;       /* Увеличена высота плеера */
+  background-color: #FFD700;
+  border: 4px solid #000000;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.star-group .play-button {
+  width: 44px;       
+  height: 44px;
+  margin-right: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.star-group .play-button .btn-icon {
+  font-size: 24px;   
+  color: #000000;
+  line-height: 1;
+}
+
+.star-group .progress-wrapper {
+  flex-grow: 1;
+  height: 12px;      
+  background-color: #000000;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-width: 80px;
+  margin-right: 14px;
+}
+
+.star-group .progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #FFFACD;
+  border-radius: 6px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.1s linear;
+  z-index: 1;
+}
+
+.star-group .progress-thumb {
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  z-index: 2;
+  display: none;
+}
+
+.star-group .progress-wrapper:hover .progress-thumb {
+  display: block;
+}
+
+/* --- СЦЕНА С ТОРТОМ И КАРТОЧКАМИ --- */
+.cake-scene {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cake-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 40%;
+  max-width: 500px;
+}
+
+.cake-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 5px solid #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 5;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-1 { transform: translate(calc(50% - 300px), 50%) rotate(-15deg); }
+.card-2 { transform: translate(calc(50% - 210px), calc(50% - 250px)) rotate(10deg); }
+.card-3 { transform: translate(calc(50% + 70px), calc(50% - 280px)) rotate(25deg); }
+.card-4 { transform: translate(calc(50% + 250px), calc(50% - 140px)) rotate(-10deg); }
+.card-5 { transform: translate(calc(50% + 280px), 50%) rotate(-25deg); }
+.card-6 { transform: translate(calc(50% + 140px), calc(50% + 250px)) rotate(15deg); }
+.card-7 { transform: translate(calc(50% - 140px), calc(50% + 250px)) rotate(-5deg); }
+
+.card:hover {
+  transform: scale(1.1) translateZ(50px) rotate(0deg);
+  z-index: 20;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+}
+
+/* --- КНОПКА МУЗЫКИ --- */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 14px 28px;
+  background-color: #FFD700;
+  color: #333;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 16px;
+}
+
+.music-btn:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+.music-btn.active {
+  background-color: #28a745;
+  color: white;
+}
+
+/* --- АДАПТИВНОСТЬ (МОБИЛЬНЫЕ) --- */
+@media (max-width: 768px) {
+  .star-players-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 20px;
+  }
+
+  .star-group {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .star-btn {
+    width: 280px;
+    height: 280px;
+  }
+
+  .star-group .player-container {
+    height: 60px;
+    border-radius: 30px;
+    padding-left: 16px;
+  }
+
+  .star-group .play-button {
+    width: 44px;
+    height: 44px;
+    margin-right: 14px;
+  }
+
+  .star-group .play-button .btn-icon {
+    font-size: 24px;
+  }
+
+  .star-group .progress-wrapper {
+    height: 12px;
+  }
+
+  .star-group .progress-thumb {
+    width: 12px;
+    height: 12px;
+  }
+
+/* --- СЦЕНА С ТОРТОМ И КАРТОЧКАМИ (КАРТОЧКИ ЛЕВЕЕ НА 50px И МЕНЬШЕ) --- */
+.cake-scene {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 180px;
+}
+
+.cake-wrapper {
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 55%;
+  max-width: 750px;
+}
+
+.cake-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card {
+  position: absolute;
+  width: 200px;          /* Уменьшена ширина (было 240px) */
+  height: 200px;         /* Уменьшена высота (было 240px) */
+  border: 3px solid #fff;/* Уменьшена толщина рамки */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  border-radius: 6px;    /* Уменьшен радиус скругления */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 5;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Позиции карточек (смещены левее на 50px относительно предыдущей версии) */
+.card-1 { transform: translate(calc(50% - 750px), calc(45% - 50px)) rotate(-20deg); }
+.card-2 { transform: translate(calc(50% - 600px), calc(50% - 500px)) rotate(15deg); }
+.card-3 { transform: translate(calc(50% - 200px), calc(50% - 550px)) rotate(30deg); }
+.card-4 { transform: translate(calc(50% + 300px), calc(50% - 300px)) rotate(-15deg); }
+.card-5 { transform: translate(calc(50% + 350px), calc(55% - 50px)) rotate(-30deg); }
+.card-6 { transform: translate(calc(50% + 100px), calc(50% + 400px)) rotate(20deg); }
+.card-7 { transform: translate(calc(50% - 500px), calc(50% + 400px)) rotate(-10deg); }
+
+.card:hover {
+  transform: scale(1.2) translateZ(50px) rotate(0deg);
+  z-index: 20;
+  box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+}
+
+/* --- АДАПТИВНОСТЬ (МОБИЛЬНЫЕ) --- */
+@media (max-width: 768px) {
+  .cake-scene {
+    height: 750px;
+    perspective: 800px;
+    padding-bottom: 140px;
+  }
+
+  .cake-wrapper {
+    width: 65%;
+    max-width: 650px;
+    top: 55%;
+    left: 55%;
+  }
+
+  .card {
+    width: 160px;        /* Еще меньше на мобильных */
+    height: 160px;
+    border-width: 2px;
+  }
+
+  /* Скорректированные позиции для мобильных (смещены левее пропорционально) */
+  .card-1 { transform: translate(calc(50% - 550px), calc(45% - 35px)) rotate(-20deg); }
+  .card-2 { transform: translate(calc(50% - 420px), calc(50% - 385px)) rotate(15deg); }
+  .card-3 { transform: translate(calc(50% - 120px), calc(50% - 415px)) rotate(30deg); }
+  .card-4 { transform: translate(calc(50% + 230px), calc(50% - 185px)) rotate(-15deg); }
+  .card-5 { transform: translate(calc(50% + 265px), calc(55% - 35px)) rotate(-30deg); }
+  .card-6 { transform: translate(calc(50% + 80px), calc(50% + 385px)) rotate(20deg); }
+  .card-7 { transform: translate(calc(50% - 370px), calc(50% + 385px)) rotate(-10deg); }
+}

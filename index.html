@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём Рождения, Бодя!</title>
+    <link rel="stylesheet" href="vendor/style.css">
+</head>
+<body>
+<!-- Кнопка управления -->
+<button id="music-toggle" class="music-btn">🎵</button>
+
+<!-- Аудиоплеер -->
+<audio id="bg-music" loop>
+  <source src="assets/audio/music.mp3" type="audio/mpeg">
+</audio>
+
+    <!-- ЦЕНТРАЛЬНЫЙ БЛОК -->
+    <section class="hero-section">
+        <div class="photo-box">
+            <img src="assets/img/banner-wide.png" alt="">
+        </div>
+        
+        <div class="photo-container">
+            <img src="assets/img/photo-boy.jpg" alt="Фото именинника">
+        </div>
+
+        <!-- Главный плеер (структура сохранена, id удалены) -->
+        <div class="player-container">
+            <button class="play-button" aria-label="Воспроизвести">
+                <span class="btn-icon">▶</span>
+            </button>
+
+            <div class="progress-wrapper">
+                <div class="progress-fill"></div>
+                <div class="progress-thumb"></div>
+            </div>
+
+            <audio>
+                <source src="assets/audio/birthday-song.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </section>
+
+    <!-- СРЕДНИЙ БЛОК (КОТ) -->
+    <section class="middle-section">
+        <div class="cake-cat-wrapper">
+            <img src="assets/img/cat-party.jpg" >
+        </div>
+    </section>
+
+    <!-- НИЖНИЙ БЛОК (ТЕКСТ И КОТ С ТОРТОМ) -->
+    <section class="middle-section">
+        <div class="cake-cat-wrapper">
+            <img src="assets/img/note.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="middle-section">
+        <div class="cake-cat-wrapper">
+            <img src="assets/img/star.png" alt="">
+        </div>
+    <div class="cake-cat-wrapper">
+        <img src="assets/img/cat-cake.jpg" >
+    </div>
+    
+    <div class="cake-cat-wrapper">
+        <img src="assets/img/voices.png" >
+    </div>
+    </section>
+
+
+
+   <!-- КОНТЕЙНЕР ДЛЯ 4 ПЛЕЕРОВ (ОБНОВЛЕННАЯ СТРУКТУРА) -->
+    <div class="star-players-container">
+        
+        <!-- Группа 1: Милана -->
+        <div class="star-group">
+            <!-- ЗВЕЗДА (Картинка) -->
+            <!-- ЗАМЕНИ src НА СВОЙ ФАЙЛ (например, assets/img/milana-star.png) -->
+            <button class="star-btn" aria-label="Поздравление от Миланы">
+                <img src="assets/img/milana-label.png" alt="Звезда Миланы">
+            </button>
+            
+            <!-- Плеер ПОД звездой -->
+            <div class="player-container">
+                <button class="play-button" aria-label="Воспроизвести">
+                    <span class="btn-icon">▶</span>
+                </button>
+                <div class="progress-wrapper">
+                    <div class="progress-fill"></div>
+                    <div class="progress-thumb"></div>
+                </div>
+                <audio>
+                    <source src="assets/audio/milana.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- Группа 2: Семла -->
+        <div class="star-group">
+            <!-- ЗВЕЗДА (Картинка) -->
+            <button class="star-btn" aria-label="Поздравление от Семлы">
+                <img src="assets/img/semlya-label.png" alt="Звезда Семлы">
+            </button>
+
+            <!-- Плеер ПОД звездой -->
+            <div class="player-container">
+                <button class="play-button" aria-label="Воспроизвести">
+                    <span class="btn-icon">▶</span>
+                </button>
+                <div class="progress-wrapper">
+                    <div class="progress-fill"></div>
+                    <div class="progress-thumb"></div>
+                </div>
+                <audio>
+                    <source src="assets/audio/semlya.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- Группа 3: Тётя Геля -->
+        <div class="star-group">
+            <!-- ЗВЕЗДА (Картинка) -->
+            <button class="star-btn" aria-label="Поздравление от тёти Гели">
+                <img src="assets/img/tetya-gelya-label.png" alt="Звезда тёти Гели">
+            </button>
+
+            <!-- Плеер ПОД звездой -->
+            <div class="player-container">
+                <button class="play-button" aria-label="Воспроизвести">
+                    <span class="btn-icon">▶</span>
+                </button>
+                <div class="progress-wrapper">
+                    <div class="progress-fill"></div>
+                    <div class="progress-thumb"></div>
+                </div>
+                <audio>
+                    <source src="assets/audio/tetya_gelya.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- Группа 4: Вика и Арсений -->
+        <div class="star-group">
+            <!-- ЗВЕЗДА (Картинка) -->
+            <button class="star-btn" aria-label="Поздравление от Вики и Арсения">
+                <img src="assets/img/vika-arseniy-label.png" alt="Звезда Вики и Арсения">
+            </button>
+
+            <!-- Плеер ПОД звездой -->
+            <div class="player-container">
+                <button class="play-button" aria-label="Воспроизвести">
+                    <span class="btn-icon">▶</span>
+                </button>
+                <div class="progress-wrapper">
+                    <div class="progress-fill"></div>
+                    <div class="progress-thumb"></div>
+                </div>
+                <audio>
+                    <source src="assets/audio/Ars.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+    </div>
+
+<div class="cake-scene">
+
+  <!-- Торт (должен быть ПОСЛЕ карточек в DOM, чтобы лежать поверх них) -->
+  <div class="cake-wrapper">
+    <img src="assets/img/cake.png" alt="Торт" class="cake-img">
+  </div>
+</div>
+
+
+    <script src="vendor/script.js"></script>
+</body>
+</html>
